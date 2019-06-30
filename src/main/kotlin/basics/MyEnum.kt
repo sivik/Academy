@@ -5,3 +5,11 @@ enum class MyEnum {
     SECOND,
     THIRD
 }
+
+class FailureClass{
+    private enum class MyEpicEnum{
+        FIVE,
+        SIX,
+        SEVEN
+    }
+}

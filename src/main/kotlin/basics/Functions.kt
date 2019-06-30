@@ -33,3 +33,12 @@ class FunctionClass() {
     fun methodSix(param1: String?, param2: String?):Int? = methodFive(param1,param2)
     fun methodSeven(param1: String?, param2: String?) = methodFive(param1,param2)
 }
+
+//Pisanie funkcji nazwami wlasnymi
+fun `Moja ulubiona funkcja co robi wszystko`(){
+
+}
+fun MojaUlubionaFunkcja(){
+    `Moja ulubiona funkcja co robi wszystko`()
+}
+

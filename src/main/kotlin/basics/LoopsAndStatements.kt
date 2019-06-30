@@ -125,6 +125,8 @@ class Loops {
         items.forEach { print(it) }
 
         //podejscie funkcyjne nadpisanie nazwy paramtru iteracji
+        //items.forEach(myString -> print(myString)) <- tak nie robimy nawiasy {}, a nie ()
+        //items.forEach { //Tu jest lambda }
         items.forEach { myString -> print(myString) }
 
         //co uwazacie za czytelniejsze?

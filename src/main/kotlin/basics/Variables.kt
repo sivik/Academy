@@ -61,7 +61,6 @@ const val constVariable = "Hej, a  ja jestem stałą. Trzeba mnie od razu zainic
 //Roznica miedzy val, a const val polega na tym, ze const val musi byc domyslnie od razu zadeklarowana
 //Natomiast val "czeka" na swoja deklaracje
 
-
 //Przeslonienie nazw jak w innych jezykach
 class VariableClass(){
     //Pola - nazwy składowych klasy

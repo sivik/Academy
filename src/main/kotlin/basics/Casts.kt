@@ -1,7 +1,7 @@
 package basics
 
 fun cast() {
-    val x = "asdad"
+    val x = "EXAMPLE"
 
     val y = x is String     //true
     val z = x !is String    //false

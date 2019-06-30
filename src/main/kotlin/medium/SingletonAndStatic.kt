@@ -1,3 +1,5 @@
+package medium
+
 object StarterSingletonAndStatic {
     val stringSingleton = "Statyczna zmienna z Singletona"
 
@@ -14,9 +16,13 @@ class MyClass{
     }
 }
 
-fun omgPlSNoStatic(){
-    StarterSingletonAndStatic.stringSingleton
-    StarterSingletonAndStatic.staticSingletonFunction()
-    MyClass.stringClass
-    MyClass.staticFunctionInCompanionObject()
+fun `OMG! Please NoStatic`(){
+    println(StarterSingletonAndStatic.stringSingleton)
+    println(StarterSingletonAndStatic.staticSingletonFunction())
+    println(MyClass.stringClass)
+    println(MyClass.staticFunctionInCompanionObject())
+}
+
+fun main(){
+  `OMG! Please NoStatic`()
 }
