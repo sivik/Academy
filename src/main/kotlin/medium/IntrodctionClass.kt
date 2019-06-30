@@ -1,6 +1,6 @@
 package medium
 
-//domyslnie zasieg jest public, występują także protected oraz privare
+//domyslnie zasieg jest public, występują także protected,internal, oraz private
 class IntrodctionClass {
     //pola
     val prop = 15
