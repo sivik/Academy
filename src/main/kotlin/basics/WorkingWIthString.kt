@@ -16,6 +16,7 @@ fun main(){
     workWithSplit()
     workWithTrim()
     workWithPadding()
+    matches()
 }
 
 fun workWithSubstring(){
@@ -147,7 +148,7 @@ fun workWithTrim(){
 
 fun workWithPadding(){
     val nums = intArrayOf(657, 122, 3245, 345, 99, 18)
-    
+
     nums.toList().forEach { number_from_list -> println(number_from_list.toString().padStart(20, '.')) }
     /*
     .................657
