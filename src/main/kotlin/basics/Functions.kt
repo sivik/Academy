@@ -1,7 +1,10 @@
 package basics
 
-//Fukcja przyjmujaca dwa paramtry zwracająca typ void
-fun GlobalFunction(param1: String, param2: Long?) {}
+//Fukcja przyjmujaca dwa paramtry zwracająca typ Unit // (Void)
+
+fun GlobalFunction(param1: String, param2: Long?): Unit {}
+//fun GlobalFunction(param1: String, param2: Long?) {}
+
 
 //Funkcja zwracajaca typ string
 fun GlobalFunction(): String {

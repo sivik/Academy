@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a42d3d27-47a1-44fc-b15f-44f8c659c7d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/advanced/GenericTypes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/basics/WorkingWIthString.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/advanced/ExtensionFunction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/advanced/ExtensionFunction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/advanced/LIstenerCreator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/advanced/LIstenerCreator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/advanced/WorkingWithCollections.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/advanced/WorkingWithCollections.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basics/Functions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/basics/Functions.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -30,28 +28,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/Casts.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/Main.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/medium/SingletonAndStatic.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="252">
+              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -59,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/medium/IntrodctionClass.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+            <state relative-caret-position="-1189">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -68,26 +48,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/advanced/ExtensionFunction.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/advanced/GenericTypes.kt">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="42">
-              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/advanced/LIstenerCreator.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/Variables.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+            <state relative-caret-position="-1155">
+              <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -95,17 +66,58 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/medium/DataClass.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
+            <state relative-caret-position="113">
               <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/advanced/WorkingWithCollections.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/Collections.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="113">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/WorkingWIthString.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1470">
+              <caret line="149" column="4" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="4" />
+              <folding>
+                <element signature="n#!!block;n#workWithSubstring#0" />
+                <element signature="n#!!block;n#workWithReplace#0" />
+                <element signature="n#!!block;n#workWithCapitalize#0" />
+                <element signature="n#!!block;n#workWithContains#0" />
+                <element signature="n#!!block;n#workWithLength#0" />
+                <element signature="n#!!block;n#workWithToString#0" />
+                <element signature="n#!!block;n#workWithEndsWith#0" />
+                <element signature="n#!!block;n#stringFormat#0" />
+                <element signature="n#!!block;n#isEmpty#0" />
+                <element signature="n#!!block;n#last#0" />
+                <element signature="n#!!block;n#matches#0" />
+                <element signature="n#!!block;n#maxMIn#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.40/682cd7821872d1a3c1e8a3e6bdaabd17f2b71004/kotlin-stdlib-common-1.3.40-sources.jar!/generated/_Strings.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="1129" column="24" selection-start-line="1129" selection-start-column="24" selection-end-line="1129" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.40/7af6fd6b9293e80fc7408493a764858a7f66b022/kotlin-stdlib-1.3.40-sources.jar!/kotlin/text/StringsJVM.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="325" column="32" selection-start-line="325" selection-start-column="32" selection-end-line="325" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -113,7 +125,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/medium/Constructors.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
+            <state relative-caret-position="756">
               <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
             </state>
           </provider>
@@ -140,17 +152,18 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/basics/Collections.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/basics/MyEnum.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/basics/Casts.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/basics/Functions.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/basics/LoopsAndStatements.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/basics/Variables.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/medium/SingletonAndStatic.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/medium/Constructors.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/medium/DataClass.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/medium/IntrodctionClass.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/advanced/ExtensionFunction.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/advanced/LIstenerCreator.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/advanced/WorkingWithCollections.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/advanced/GenericTypes.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/medium/IntrodctionClass.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/basics/Functions.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/basics/WorkingWIthString.kt" />
       </list>
     </option>
   </component>
@@ -166,6 +179,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -200,11 +214,26 @@
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="advanced" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="academy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="academy" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="basics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="academy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="academy" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="medium" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,7 +268,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.medium.ConstructorsKt">
+  <component name="RunManager" selected="Kotlin.basics.WorkingWIthStringKt">
     <configuration name="basics.CastsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="academy.main" />
       <option name="VM_PARAMETERS" />
@@ -253,6 +282,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="basics.WorkingWIthStringKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="academy.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="basics.WorkingWIthStringKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="main.Main" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="academy.main" />
       <option name="VM_PARAMETERS" />
@@ -261,19 +303,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="main.StartKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="academy.main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="main.StartKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -307,11 +336,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.basics.WorkingWIthStringKt" />
         <item itemvalue="Kotlin.medium.ConstructorsKt" />
         <item itemvalue="Kotlin.medium.SingletonAndStaticKt" />
         <item itemvalue="Kotlin.basics.CastsKt" />
         <item itemvalue="Kotlin.main.Main" />
-        <item itemvalue="Kotlin.main.StartKt" />
       </list>
     </recent_temporary>
   </component>
@@ -326,18 +355,29 @@
       <option name="presentableId" value="Default" />
       <updated>1561885883201</updated>
       <workItem from="1561885887593" duration="17318000" />
-      <workItem from="1561923096517" duration="1210000" />
+      <workItem from="1561923096517" duration="1512000" />
+      <workItem from="1561924691577" duration="907000" />
+      <workItem from="1561989203902" duration="582000" />
+      <workItem from="1562013815588" duration="6026000" />
     </task>
+    <task id="LOCAL-00001" summary="additiona features">
+      <created>1561924538341</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1561924538341</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18528000" />
+    <option name="totallyTimeSpent" value="26345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="678" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2659091" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -346,12 +386,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2224299" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31214952" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32960895" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32897195" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32960895" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -372,6 +412,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="additiona features" />
+    <option name="LAST_COMMIT_MESSAGE" value="additiona features" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
@@ -382,62 +426,10 @@
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/Collections.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/Exceptions.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/Functions.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-462">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/LoopsAndStatements.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="127" column="91" selection-start-line="127" selection-start-column="91" selection-end-line="127" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/MyEnum.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/Variables.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-98">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="n#!!block;n#fooVariables#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/main/Start.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/Casts.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -448,45 +440,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/medium/SingletonAndStatic.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/advanced/GenericTypes.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/medium/IntrodctionClass.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/medium/DataClass.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/medium/Constructors.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/advanced/ExtensionFunction.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+        <state relative-caret-position="42">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/advanced/LIstenerCreator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        <state relative-caret-position="231">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -497,10 +461,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/advanced/GenericTypes.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/Casts.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/Exceptions.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/Functions.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/LoopsAndStatements.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-139">
+          <caret line="127" column="91" selection-start-line="127" selection-start-column="91" selection-end-line="127" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/MyEnum.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/Variables.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1155">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/medium/Constructors.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/medium/DataClass.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/medium/IntrodctionClass.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1189">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/medium/SingletonAndStatic.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.40/7af6fd6b9293e80fc7408493a764858a7f66b022/kotlin-stdlib-1.3.40-sources.jar!/kotlin/text/StringsJVM.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="325" column="32" selection-start-line="325" selection-start-column="32" selection-end-line="325" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/advanced/ExtensionFunction.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.40/682cd7821872d1a3c1e8a3e6bdaabd17f2b71004/kotlin-stdlib-common-1.3.40-sources.jar!/generated/_Strings.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="1129" column="24" selection-start-line="1129" selection-start-column="24" selection-end-line="1129" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/basics/WorkingWIthString.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="149" column="4" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!block;n#workWithSubstring#0" />
+            <element signature="n#!!block;n#workWithReplace#0" />
+            <element signature="n#!!block;n#workWithCapitalize#0" />
+            <element signature="n#!!block;n#workWithContains#0" />
+            <element signature="n#!!block;n#workWithLength#0" />
+            <element signature="n#!!block;n#workWithToString#0" />
+            <element signature="n#!!block;n#workWithEndsWith#0" />
+            <element signature="n#!!block;n#stringFormat#0" />
+            <element signature="n#!!block;n#isEmpty#0" />
+            <element signature="n#!!block;n#last#0" />
+            <element signature="n#!!block;n#matches#0" />
+            <element signature="n#!!block;n#maxMIn#0" />
+          </folding>
         </state>
       </provider>
     </entry>
