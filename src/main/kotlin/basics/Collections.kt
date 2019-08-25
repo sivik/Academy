@@ -30,7 +30,7 @@ class Collections() {
 
 
     /* Dodatkowe kolekcje które poznamy*/
-    //LinkedHashMap i list
+    //LinkedHashMap i List
     //Mutable List i map
 
 }

@@ -1,6 +1,6 @@
 package medium
 
-//Dobrze nadają się do modeli
+//Dobrze nadają się do modeli, tworzą wlasne equals i hashcode
 data class ExampleDataClass(
     val variable1: String,
     val variable2: Long = 35L,

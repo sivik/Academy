@@ -45,7 +45,7 @@ fun fooVariables() {
     //Jesli chcemy w przypadku wystapienia wartosci null dac jakas domyslna wartosc lub !!
     //variableString = variableStringWithNull !!
 
-    val result = variableDoubleWithNull ?: 88.9
+    //val result = variableDoubleWithNull ?: 88.9
 
 
     /*Dodatkowe typy o których warto wiedzieć*/
