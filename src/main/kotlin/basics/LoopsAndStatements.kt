@@ -121,7 +121,7 @@ class Loops {
             println(item)
         }
 
-        //podejscie funkcyjne
+        //podejscie inline
         items.forEach { print(it) }
 
         //podejscie funkcyjne nadpisanie nazwy paramtru iteracji

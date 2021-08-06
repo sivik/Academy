@@ -1,5 +1,7 @@
 package basics
 
+import java.util.*
+
 fun main() {
     workWithCapitalizelLetters()
     workWithSubstring()
@@ -38,15 +40,19 @@ fun workWithReplace() {
 fun workWithCapitalizelLetters() {
     //zmiana na duza litere pierwszego znaku
     println("abcd".capitalize()) // Abcd
+    println("abcd".replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }) // Abcd
 
     //zmiana na mala litere pierwszego znaku
     println("Abcd".decapitalize()) // abcd
+    println("Abcd".replaceFirstChar { it.lowercase(Locale.getDefault()) }) // abcd
 
     //zmiana na duze litery caly ciag znakow
     println("asdadw".toUpperCase()) //ASDADW
+    println("asdadw".uppercase(Locale.getDefault())) //ASDADW
 
     //zmiana na male litery caly ciag znakow
     println("ASDADW".toLowerCase()) //asdadw
+    println("ASDADW".lowercase(Locale.getDefault())) //asdadw
 }
 
 fun workWithContains() {
@@ -120,12 +126,12 @@ fun matches() {
 
 fun workWithmaxMin() {
     //zwaraca znak o najwyzszej wartosci
-    println("workaround".max()) //w
-    println("91937".max()) //9
+    println("workaround".maxOrNull()) //w
+    println("91937".maxOrNull()) //9
 
     //zwaraca znak o najwyzszej wartosci
-    println("workaround".min()) //a
-    println("91937".min()) //1
+    println("workaround".minOrNull()) //a
+    println("91937".minOrNull()) //1
 }
 
 fun workWithNoneAndRandom() {

@@ -12,7 +12,7 @@ fun cast() {
 }
 
 fun example() {
-    var list = arrayListOf("1", "2", 3, 5, 6, true, false, null)
+    var list = arrayListOf<Any?>("1", "2", 3, 5, 6, true, false, null)
     list.forEach {
         when (it) {
             is String -> println(it)
