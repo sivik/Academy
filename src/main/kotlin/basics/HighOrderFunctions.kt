@@ -1,7 +1,5 @@
 package basics
 
-import java.io.File
-
 fun main() {
     KotlinFunctions().noExtFunctions()
     KotlinFunctions().noExtFunctions()
@@ -10,7 +8,6 @@ fun main() {
 class KotlinFunctions {
     private fun someFunc() {}
 
-    //NO EXTENSIONS FUNCTION
     fun noExtFunctions() {
 
         /*===========================================*/
@@ -25,7 +22,7 @@ class KotlinFunctions {
             return@run "something"
         }
         println(mood) // I am sad
-        println(x)
+        println(x) //Something
         /*===========================================*/
 
         //#2 with
@@ -34,16 +31,18 @@ class KotlinFunctions {
         // Receiver (this)                || Argument (it)        || can return
         //this@ actualObject/parameter    || N\A                  || yes -> DiffrentType
         val w = Window()
+
         val t = with(w) {
             SetWidth(100)
             SetHeight(200)
             SetBackground("RED")
             43
         }
-        println(t)
+        println(t) // 43
         /*===========================================*/
         //3# Zabezpieczenie przed nullem w obiekcie podczas wykoywania na nim akcji
         //Spojrzmy na przykladowy kod robiacy to samo
+
         with(w.settings) {
             isMinimalized = true
             isDisabled = true
@@ -69,7 +68,7 @@ class KotlinFunctions {
     }
 
 
-    //EXTENSIONS FUNCTION
+    //Higher-Order Functions
 
     fun extFunctions() {
         //#1 T.run
@@ -87,6 +86,7 @@ class KotlinFunctions {
         //Ma te same własciwości co run ale posiada dostęp do argumentu jak i do samej klasy
         // Receiver (this)                || Argument (it)                          || can return
         //this@MyClass                    ||actualObject/parameter                  ||  yes -> DiffrentType
+
         val stringVariable2 = "..."
         stringVariable2.let {
             this.someFunc()
@@ -109,6 +109,17 @@ class KotlinFunctions {
         stringVariable3?.let { myNewNameForString ->
             println("The non null string is $myNewNameForString")
         }
+
+        //Let oraz run swietnie nadaja się do laczenia gdy dla wartosci null chcemy  wykonac operacje np.
+        stringVariable3?.let {
+            println("Not null")
+        }?.run {
+            println("Is null1")
+            println("Is null2")
+            println("Is null3")
+        }
+
+
         /*===================================================================================================================*/
 
         //#3 T.also

@@ -1,13 +1,14 @@
 package basics
 
+
 fun cast() {
     val x = "EXAMPLE"
 
     val y = x is String     //true
     val z = x !is String    //false
 
-    val w = z as Long   //w przypadku niepowodzenia rzutowania poleci null
-
+    val w = x as Long   //w przypadku niepowodzenia rzutowania poleci exception
+    val b = x as? Long // w przypadku niepowodzenia poleci null
     //WARTO PO RZUTOWANIU SPRAWDZAC IFEM LUB WHENEM
 }
 

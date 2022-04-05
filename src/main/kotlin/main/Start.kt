@@ -4,5 +4,5 @@ package main
 // Zapominamy o średnikach :)
 
 fun main() {
-    println("Witaj Akademio!")  //zlamac po println -> whitespace
+    println("Hello there! General Kenobi!")  //zlamac po println -> whitespace
 }

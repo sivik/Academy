@@ -21,6 +21,8 @@ class ExampleClass {
 
 fun exampleMethod() {
 
+    val x = SecondDataClass()
+
     //Tworzenie obiektu
     val exampleObject = ExampleClass()
 
@@ -41,7 +43,7 @@ fun exampleMethod() {
             valueFromOther2, valueFromOther, valueFromOther3
         )
 
-        //inicjalizacja dla poł nullable
+        //inicjalizacja dla pol nullable
         secondDataClass = SecondDataClass(
             variable1 = valueFromOther2,
             variable3 = valueFromOther3

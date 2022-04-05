@@ -66,23 +66,3 @@ class TestClass3(): IntroductionAbstractClass() {
 //class TestClass4: IntrodctionClass()  -> Bez open nie podziedziczymy
 
 //--------------------------------------------------------------------------
-
-sealed class IntroductionSealedClass
-// Nested
-//sealed class Fruit() {
-//    class Apple() : Fruit()
-//    class Orange() : Fruit()
-//}
-//sealed class Fruit
-//// Not nested
-//class Apple() : Fruit()
-//class Orange() : Fruit()
-//// Fruits.kt
-//sealed class Fruit() {
-//    class Apple() : Fruit()
-//    class Orange() : Fruit()
-//    open class UnknownFruit(): Fruit()
-//}
-//// SomeOtherFile.kt
-//class Grape : Fruit() // Not Acceptable
-//class Tomato : UnknownFruit() // Acceptable

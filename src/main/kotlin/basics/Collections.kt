@@ -23,9 +23,7 @@ class Collections() {
         //HashMap
         val map: HashMap<Int, String> = hashMapOf(1 to "x", 2 to "y", -1 to "zz")
         val map2 = hashMapOf(1 to "x", 2 to "y", -1 to "zz")
-
         val result = map[1]
-
     }
 
 

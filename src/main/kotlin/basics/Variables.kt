@@ -72,4 +72,57 @@ class VariableClass(){
     lateinit var myLateVariable: String
     var mySecondLateVariable: String? = null
 
+
+    fun x(){
+        if(::myLateVariable.isInitialized){
+
+        }
+    }
+
+    // https://stackoverflow.com/a/36623703
+
+    class BigClass()
+    private val bigObject: BigClass = BigClass()
+
+    //read only property ->
+    /*
+    *  jest używana głównie wtedy, gdy chcemy uzyskać dostęp do jakiejś
+    * właściwości tylko do odczytu, ponieważ przez cały czas ma miejsce dostęp do tego samego obiektu.*/
+    val heavyObject: BigClass by lazy {
+        BigClass()
+    }
+
+
+}
+
+//Nalezy pamietaz ze przy delegacie lazy uzywamy tego samego obiektu
+fun main(){
+    val someClass = VariableClass()
+    println(someClass.heavyObject)
+    println(someClass.heavyObject)
+}
+
+
+//By lazy pozwala zainicjować zmienną dopiero wtedy gdy bedzie ona nam potrzebna
+//Widac podejscie ze ma uzupelnic zmienna po sprawdzeniu czy jest null i wtedy ja uzupelnic.
+class Printer(val model: String, val type: String) {
+
+    var fullName: String? = null
+
+    fun printName(){
+        if (fullName == null){
+            fullName = "$model $type"
+        }
+        println(fullName)
+    }
+}
+
+//Mozna to zrobic prosciej
+class Phone (val model: String, val type: String) {
+    //Wartość niezmienna
+    val fullName: String by lazy { "$model $type" }
+
+    fun printName(){
+        println(fullName)
+    }
 }

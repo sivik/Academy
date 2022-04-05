@@ -54,6 +54,7 @@ class Statements() {
                 // execute this block of code
             }
         }
+
     }
 
     fun shortedIF_WHEN() {
@@ -127,7 +128,7 @@ class Loops {
         //podejscie funkcyjne nadpisanie nazwy paramtru iteracji
         //items.forEach(myString -> print(myString)) <- tak nie robimy nawiasy {}, a nie ()
         //items.forEach { //Tu jest lambda }
-        items.forEach { myString -> print(myString) }
+        items.forEach {  items.forEach {  } }
 
         //co uwazacie za czytelniejsze?
         /*1*/

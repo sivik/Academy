@@ -41,6 +41,7 @@ class FunctionClass() {
 fun `Moja ulubiona funkcja co robi wszystko`(){
 
 }
+
 fun MojaUlubionaFunkcja(){
     `Moja ulubiona funkcja co robi wszystko`()
 }

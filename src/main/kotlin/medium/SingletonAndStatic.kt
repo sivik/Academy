@@ -3,9 +3,10 @@ package medium
 object StarterSingletonAndStatic {
     val stringSingleton = "Statyczna zmienna z Singletona"
 
-    fun staticSingletonFunction():String{
+    fun staticSingletonFunction(): String{
         return "Jestem statyczna funkcja z Singletona"
     }
+
 }
 
 class MyClass{
