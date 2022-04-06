@@ -13,8 +13,6 @@ class KotlinFunctions {
         /*===========================================*/
         //#1 run
         //Pozwala wykonać dowoną akcje dając dostęp do składowych klasy, oraz przesłaniać zmienne
-        // Receiver (this)         || Argument (it)      || can return
-        //this@Class               || N\A                || yes -> DiffrentType
         val mood = "I am sad"
         val x = run {
             val mood = "I am happy"
@@ -24,25 +22,10 @@ class KotlinFunctions {
         println(mood) // I am sad
         println(x) //Something
         /*===========================================*/
-
-        //#2 with
-        // Jest wygodna, gdy musisz wywołać wiele różnych metod na tym samym obiekcie.
-        // Zamiast powtarzać zmienną zawierającą ten obiekt w każdym wierszu,
-        // Receiver (this)                || Argument (it)        || can return
-        //this@ actualObject/parameter    || N\A                  || yes -> DiffrentType
-        val w = Window()
-
-        val t = with(w) {
-            SetWidth(100)
-            SetHeight(200)
-            SetBackground("RED")
-            43
-        }
-        println(t) // 43
         /*===========================================*/
-        //3# Zabezpieczenie przed nullem w obiekcie podczas wykoywania na nim akcji
+        //2# Zabezpieczenie przed nullem w obiekcie podczas wykoywania na nim akcji
         //Spojrzmy na przykladowy kod robiacy to samo
-
+        val w = Window()
         with(w.settings) {
             isMinimalized = true
             isDisabled = true
@@ -194,6 +177,24 @@ class KotlinFunctions {
         //  fun createIntent(intentData: String, intentAction: String) =
         //      Intent().apply { action = intentAction }
         //              .apply { data = Uri.parse(intentData) }
+        ///====================================================================
+
+        //#5 with
+        // Jest wygodna, gdy musisz wywołać wiele różnych metod na tym samym obiekcie.
+        // Zamiast powtarzać zmienną zawierającą ten obiekt w każdym wierszu,
+        // Receiver (this)                || Argument (it)        || can return
+        //this@ actualObject/parameter    || N\A                  || yes -> DiffrentType
+        val w = Window()
+
+        val t = with(w) {
+            SetWidth(100)
+            SetHeight(200)
+            SetBackground("RED")
+            43
+        }
+        println(t) // 43
+
+
     }
 }
 
