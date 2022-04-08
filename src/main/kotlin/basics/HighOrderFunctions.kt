@@ -194,7 +194,6 @@ class KotlinFunctions {
         }
         println(t) // 43
 
-
     }
 }
 
