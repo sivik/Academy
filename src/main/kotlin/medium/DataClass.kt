@@ -50,3 +50,10 @@ fun exampleMethod() {
         )
     }
 }
+
+
+fun myCopy(){
+    //Nalezy pamietac, ze funkcja copy jest kopiowaniem plytkim, czyli kopiuje wartosci zmiennych
+    // w przypadku list i kolekcji kopiuje referencje a nie wartosci.
+    val myCopy = SecondDataClass("1",2, "3").copy()
+}

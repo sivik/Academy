@@ -1,4 +1,4 @@
-package advanced
+package medium
 
 enum class Size {
     SMALL, MEDIUM, BIG
@@ -97,17 +97,38 @@ fun sortSth(){
         Stone(Size.BIG, "Green", "Emerald", 4),
         Stone(Size.SMALL, "Blue", "Sapphire", 2)
     )
+}
 
-    
+fun additionalExt(){
+    //Equals
+    val listA = listOf(13, 15, 27, -6)
+    val listB = listOf(13, 27, -6, 15)
+    println(listA == listB)
+    //
+    //"indexOf" ma na celu znaleźć dla nas miejsce na liście jakie zajmuje szukany przez nas obiekt.
+    // Zwraca liczbę całkowitą w postaci indeksu na którym "leży" znaleziony obiekt
+    // (-1, jeśli w ogóle takiego nie znaleziono).
+    println(listA.indexOf(15))
+
+    //sortowanie i odwrocenie elementow w liscie
+    println(listA.sorted())
+    println(listA.reversed())
+
+}
+
+fun contains(){
+    val list = arrayListOf(1,2,3,4)
+    println(list.contains(3))
+    println(3 in list)
+
+    println(list.contains(3).not())
+    println(3 !in list)
 }
 
 fun main(){
     firstSth()
 }
 
-//sort
-// wariancja konwariancja
-// wyrazenia lambda jako parametry
 // przeladowanie operatorow
 //refiiled
 //Korutyny

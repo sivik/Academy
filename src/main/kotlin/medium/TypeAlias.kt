@@ -1,4 +1,4 @@
-package notassignyet
+package medium
 
 typealias MyExtraProvider = (() -> Char)?
 
@@ -47,8 +47,10 @@ class Reason {
     }
 
     fun funinfun() {
+
         fun fun1() {}
         fun fun2() {}
+
         val x = false
         when (x) {
             true -> fun1()

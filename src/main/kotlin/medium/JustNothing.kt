@@ -1,4 +1,4 @@
-package notassignyet
+package medium
 
 
 //Typ Nothing pozwala m. in. zwrocic informacje ze dalej sie nic nie zadzieje.

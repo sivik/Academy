@@ -1,4 +1,4 @@
-package advanced
+package medium
 
 interface OnItemClickListener {
     fun onClick(download: Boolean)

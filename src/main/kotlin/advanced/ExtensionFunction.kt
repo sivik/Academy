@@ -22,7 +22,7 @@ class ExtensionClass(){
         myString = myString.concatAsString(int1)
         float1.someFunction(int1)
 
-        //uzycie nadpisania operatora
+        //niejawne uzycie extension funkcji
         listOf(1, 2, 3) * 4
     }
 }
