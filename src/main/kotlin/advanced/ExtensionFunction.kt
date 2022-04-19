@@ -1,5 +1,9 @@
 package advanced
 
+fun Int.makeSth(){
+    this+2
+}
+
 fun <T> String.concatAsString(b: T) : String {
     return this.toString() + b.toString()
 }
@@ -19,6 +23,7 @@ class ExtensionClass(){
 
     fun SomeMethod(){
         //uzycie extension methods
+        4.makeSth()
         myString = myString.concatAsString(int1)
         float1.someFunction(int1)
 

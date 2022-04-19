@@ -125,10 +125,7 @@ fun contains(){
     println(3 !in list)
 }
 
+
 fun main(){
     firstSth()
 }
-
-// przeladowanie operatorow
-//refiiled
-//Korutyny
