@@ -37,6 +37,5 @@ fun myWhen(){
         in 1 until 101 -> true
         in listOf(1,2,3,4) -> false
         else -> false
-
     }
 }

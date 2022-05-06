@@ -58,7 +58,6 @@ class Collections() {
         elementZero = list[0]
         list[0] = "inny zerowy element"
 
-
     }
 
     fun fooMaps() {

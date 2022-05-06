@@ -1,5 +1,7 @@
 package advanced
 
+
+
 fun Int.makeSth(){
     this+2
 }
@@ -19,7 +21,7 @@ operator fun List<Int>.times(by: Int): List<Int> {
 class ExtensionClass(){
     var int1 = 10
     var float1 = 20.0f
-    var myString = ""
+    var myString = "Point: "
 
     fun SomeMethod(){
         //uzycie extension methods

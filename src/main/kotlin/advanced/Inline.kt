@@ -11,6 +11,7 @@ import kotlin.system.measureTimeMillis
 // również pewnym "ciężarem" dla CPU, ponieważ wymaga więcej cykli (taktów zegara) niż wykonanie tej samej treści
 // funkcji bez jej wywoływania (na zewnątrz).
 
+
 fun performTaskk(iterations : Int, task : (iteration : Int, max : Int) -> Unit)
 {
     for (i in 1..iterations)

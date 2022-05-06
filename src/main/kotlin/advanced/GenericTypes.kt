@@ -20,6 +20,7 @@ fun main(){
 //---------------------------------
 
 open class GenericPoint(var x : Int, var y : Int)
+
 class ExtraGeneric<T : GenericPoint>(val t : T)
 
 class Entity(x : Int, y : Int, val model : String) : GenericPoint(x, y)

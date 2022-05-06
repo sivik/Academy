@@ -1,7 +1,9 @@
 package advanced
 
 
+
 class Complex(private val real: Int, private val imaginary: Int) {
+
     operator fun plus(c: Complex): Complex {
         return Complex(real + c.real, imaginary + c.imaginary)
     }
@@ -25,16 +27,16 @@ class SthResult(
         val temp = hashMapOf<Int, ArrayList<String>>()
         temp.putAll(other.results.filter { it.value.isNotEmpty() })
         temp.putAll(this.results.filter { it.value.isNotEmpty() })
+
         this.errors.addAll(other.errors)
         this.warnings.addAll(other.warnings)
+
         return SthResult(
             results = temp,
             errors = this.errors,
             warnings = this.warnings
         )
     }
-
-
 }
 
 fun main() {
