@@ -1,6 +1,6 @@
 plugins {
     java
-    kotlin("jvm") version "2.1.20"
+    kotlin("jvm") version "2.2.0"
 }
 
 group = "com.apator.academy"
@@ -12,6 +12,10 @@ repositories {
 
 kotlin {
     jvmToolchain(17)
+    compilerOptions {
+        // Włącza context parameters (feature preview w Kotlin 2.2)
+        freeCompilerArgs.add("-Xcontext-parameters")
+    }
 }
 
 dependencies {

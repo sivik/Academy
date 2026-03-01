@@ -29,7 +29,7 @@ suspend fun sequentialExample() {
     println("$name: $score pkt (${System.currentTimeMillis() - start}ms)")
 }
 
-suspend fun parallelExample() {
+suspend fun parallelExample() = coroutineScope {
     println("=== Równoległe z async/await (szybkie) ===")
     val start = System.currentTimeMillis()
 
@@ -47,7 +47,7 @@ suspend fun parallelExample() {
 
 // ---- 2. asyncLazy — uruchom kiedy potrzebujesz ----
 
-suspend fun lazyAsyncExample() {
+suspend fun lazyAsyncExample() = coroutineScope {
     println("=== async z LAZY start ===")
 
     // CoroutineStart.LAZY — korutyna NIE startuje od razu
@@ -69,7 +69,7 @@ suspend fun fetchData(id: Int): String {
     return "dane_$id"
 }
 
-suspend fun awaitAllExample() {
+suspend fun awaitAllExample() = coroutineScope {
     println("=== awaitAll ===")
     val start = System.currentTimeMillis()
 

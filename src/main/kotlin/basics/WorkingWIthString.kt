@@ -1,6 +1,8 @@
 package basics
 
 import java.util.*
+import java.util.Locale
+import java.util.Locale.getDefault
 
 fun main() {
     workWithCapitalizelLetters()
@@ -47,11 +49,11 @@ fun workWithCapitalizelLetters() {
     println("Abcd".replaceFirstChar { it.lowercase(Locale.getDefault()) }) // abcd
 
     //zmiana na duze litery caly ciag znakow
-    println("asdadw".toUpperCase()) //ASDADW
+    println("asdadw".uppercase(getDefault())) //ASDADW
     println("asdadw".uppercase(Locale.getDefault())) //ASDADW
 
     //zmiana na male litery caly ciag znakow
-    println("ASDADW".toLowerCase()) //asdadw
+    println("ASDADW".lowercase(getDefault())) //asdadw
     println("ASDADW".lowercase(Locale.getDefault())) //asdadw
 }
 
