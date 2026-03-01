@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b4389dc-93de-40bb-96c1-f23d0f2405b9" name="Changes" comment="Update .gitignore to exclude IDE and Claude files">
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    <list default="true" id="0b4389dc-93de-40bb-96c1-f23d0f2405b9" name="Changes" comment="Enhance Kotlin DSL with nested type aliases and update Flow example">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basics/MultiDollarInterpolation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/basics/MultiDollarInterpolation.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/basics/WhenGuards.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/basics/WhenGuards.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/coroutine/Flow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/coroutine/Flow.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/medium/NestedTypeAlias.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/medium/NestedTypeAlias.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +167,23 @@
       <option name="project" value="LOCAL" />
       <updated>1772387998986</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Enhance Kotlin DSL with nested type aliases and update Flow example">
+      <option name="closed" value="true" />
+      <created>1772389503251</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772389503251</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Enhance Kotlin DSL with nested type aliases and update Flow example">
+      <option name="closed" value="true" />
+      <created>1772389971445</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1772389971445</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,7 +201,8 @@
     <MESSAGE value="Add git ignore" />
     <MESSAGE value="Add DSL implementation for HTML, server configuration, and query building" />
     <MESSAGE value="Update .gitignore to exclude IDE and Claude files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update .gitignore to exclude IDE and Claude files" />
+    <MESSAGE value="Enhance Kotlin DSL with nested type aliases and update Flow example" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance Kotlin DSL with nested type aliases and update Flow example" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
