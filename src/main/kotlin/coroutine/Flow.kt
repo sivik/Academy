@@ -1,6 +1,7 @@
 package coroutine
 
 import kotlinx.coroutines.*
+import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.*
 
 // Flow — strumień wartości emitowanych asynchronicznie

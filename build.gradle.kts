@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     java
     kotlin("jvm") version "2.2.0"
@@ -14,7 +16,8 @@ kotlin {
     jvmToolchain(17)
     compilerOptions {
         // Włącza context parameters (feature preview w Kotlin 2.2)
-        freeCompilerArgs.add("-Xcontext-parameters")
+        freeCompilerArgs.addAll(listOf("-Xcontext-parameters", "-Xnested-type-aliases"))
+
     }
 }
 

@@ -108,15 +108,23 @@ fun graphQLExample() {
 fun comparisonExample() {
     val table = "users"
     val column = "email"
+    val value = "jan@example.com"
 
-    // STARE podejście — nieczytelne
-    val oldWay = "UPDATE ${table} SET verified = true WHERE ${column} = ${'$'}{value}"
+    // STARE podejście — ${'$'} to brzydki hack żeby wstawić literalny $
+    val oldWay = "UPDATE $table SET verified = true WHERE $column = ${'$'}{value}"
     println("Stare: $oldWay")
+    // Wynik: UPDATE users SET verified = true WHERE email = ${value}
 
-    // NOWE podejście — czytelne
+    // NOWE podejście — $$ interpoluje, pojedyncze $ jest literałem w szablonie
     val newWay = $$"UPDATE $$table SET verified = true WHERE $$column = $${value}"
     println("Nowe: $newWay")
-    // $${value} — bo za $$ musi być { lub identyfikator; tutaj chcemy literalne ${value}
+    // Wynik: UPDATE users SET verified = true WHERE email = jan@example.com
+
+    // Chcemy literalne ${placeholder} w szablonie (np. Mustache/Velocity)?
+    // W $$"..." pojedyncze ${...} jest literałem — zero hacków!
+    val template = $$"UPDATE $$table SET $$column = ${placeholder} WHERE id = ${id}"
+    println("Szablon: $template")
+    // Wynik: UPDATE users SET email = ${placeholder} WHERE id = ${id}
 }
 
 // ---- 6. $$$"..." — trzy dolary dla ekstremalnych przypadków ----

@@ -1,20 +1,22 @@
 package medium
 
 // ============================================================
-// NESTED TYPE ALIASES — beta w Kotlin 2.2
+// NESTED TYPE ALIASES — beta w Kotlin 2.2 (wymaga -Xnested-type-aliases)
 // ============================================================
 //
-// Wcześniej: typealias można było definiować TYLKO na poziomie top-level (plik/pakiet).
-// Teraz: można je umieszczać WEWNĄTRZ klas, interfejsów i obiektów.
+// Wcześniej: typealias tylko na poziomie top-level (plik/pakiet).
+// Teraz: typealias wewnątrz klas, obiektów i interfejsów.
 //
-// Po co?
-//   - Aliasy "prywatne" dla konkretnej klasy — nie zaśmiecają przestrzeni nazw
-//   - Czytelniejsze sygnaturki złożonych typów generycznych
-//   - Dokumentacja przez nazewnictwo: Map<String, List<Int>> → ScoreBoard
-//   - Wewnętrzne typy klasy mają teraz własne aliasy
+// Co działa w becie:
+//   ✅ Aliasy dla typów konkretnych wewnątrz klasy
+//   ✅ Aliasy z własnymi parametrami typów: typealias Mapper<A, B> = (A) -> B
+//   ✅ Aliasy jako typy zmiennych lokalnych WEWNĄTRZ klasy/companion
 //
-// Poprzednio: typealias UserMap = Map<Int, User>  // tylko top-level
-// Teraz też:  class Repository { typealias Cache = Map<Int, User> }
+// Ograniczenia bety:
+//   ❌ Alias NIE może odwoływać się do parametru typu klasy zewnętrznej
+//      Np. w class Graph<T> nie można pisać: typealias Node = T
+//   ❌ Aliasy z companion/klasy nie są jeszcze dostępne spoza klasy
+//      (KlasaName.AliasName nie działa) — używaj type inference lub pełnego typu
 // ============================================================
 
 // ---- 1. Podstawowy przykład — aliasy wewnątrz klasy ----
@@ -51,76 +53,102 @@ fun basicNestedAliasExample() {
     events.emit("click")
 }
 
-// ---- 2. Aliasy generyczne wewnątrz klasy generycznej ----
+// ---- 2. Aliasy z konkretnymi typami zamiast generycznych ----
+// Ograniczenie bety: alias nie może używać T z klasy zewnętrznej.
+// Rozwiązanie: użyj konkretnego typu lub zrób osobną klasę.
 
-class Graph<T> {
-    // Aliasy upraszczają złożone typy generyczne lokalnie dla tej klasy
-    typealias Node = T
-    typealias Edge = Pair<T, T>
-    typealias AdjacencyList = Map<T, Set<T>>
+class CityGraph {
+    // Wszystkie aliasy bazują na konkretnym typie String
+    typealias City = String
+    typealias Route = Pair<City, City>
+    typealias ConnectionMap = Map<City, Set<City>>
 
-    private val edges = mutableListOf<Edge>()
+    private val routes = mutableListOf<Route>()
 
-    fun addEdge(from: Node, to: Node) {
-        edges.add(Edge(from, to))
+    fun addRoute(from: City, to: City) {
+        routes.add(Route(from, to))
     }
 
-    fun toAdjacencyList(): AdjacencyList {
-        return edges.groupBy({ it.first }, { it.second })
-            .mapValues { it.value.toSet() }
-    }
+    fun connections(): ConnectionMap =
+        routes.groupBy({ it.first }, { it.second })
+            .mapValues { (_, cities) -> cities.toSet() }
 
-    fun neighbors(node: Node): Set<T> =
-        toAdjacencyList()[node] ?: emptySet()
+    fun neighbors(city: City): Set<City> =
+        connections()[city] ?: emptySet()
 }
 
 fun graphExample() {
-    println("\n=== Graf ===")
-    val graph = Graph<String>()
+    println("\n=== CityGraph ===")
+    val graph = CityGraph()
 
-    graph.addEdge("Warszawa", "Kraków")
-    graph.addEdge("Warszawa", "Gdańsk")
-    graph.addEdge("Kraków", "Wrocław")
-    graph.addEdge("Gdańsk", "Poznań")
+    graph.addRoute("Warszawa", "Kraków")
+    graph.addRoute("Warszawa", "Gdańsk")
+    graph.addRoute("Kraków", "Wrocław")
+    graph.addRoute("Gdańsk", "Poznań")
 
-    val adj = graph.toAdjacencyList()
-    adj.forEach { (city, neighbors) ->
+    graph.connections().forEach { (city, neighbors) ->
         println("  $city → $neighbors")
     }
     println("  Sąsiedzi Warszawy: ${graph.neighbors("Warszawa")}")
 }
 
-// ---- 3. Aliasy w interfejsach — kontrakt z czytelną sygnaturą ----
+// ---- 3. Aliasy z własnymi parametrami typów ----
+// To działa — alias deklaruje własne A, B niezależne od klasy zewnętrznej
 
-interface DataPipeline<In, Out> {
-    typealias Transform<A, B> = (A) -> B
-    typealias Predicate<A> = (A) -> Boolean
-    typealias Stage = Transform<In, Out>
+class Transformers {
+    typealias Mapper<A, B> = (A) -> B
+    typealias Filter<A>    = (A) -> Boolean
+    typealias Reducer<A, B> = (B, A) -> B
 
-    fun process(input: In): Out
-    fun filter(predicate: Predicate<In>): DataPipeline<In, Out>
+    fun <A, B> transform(items: List<A>, mapper: Mapper<A, B>): List<B> =
+        items.map(mapper)
+
+    fun <A> select(items: List<A>, predicate: Filter<A>): List<A> =
+        items.filter(predicate)
+
+    fun <A, B> aggregate(items: List<A>, initial: B, reducer: Reducer<A, B>): B =
+        items.fold(initial, reducer)
 }
 
-// ---- 4. Aliasy w companion object — "stałe typów" klasy ----
+fun transformersExample() {
+    println("\n=== Transformers ===")
+    val t = Transformers()
+
+    val numbers = listOf(1, 2, 3, 4, 5, 6)
+
+    val doubled = t.transform(numbers) { it * 2 }
+    println("  Podwojone: $doubled")
+
+    val evens = t.select(numbers) { it % 2 == 0 }
+    println("  Parzyste: $evens")
+
+    val sum = t.aggregate(numbers, 0) { acc, n -> acc + n }
+    println("  Suma: $sum")
+}
+
+// ---- 4. Aliasy w companion object — dostępne przez NazwaKlasy.Alias ----
 
 class HttpClient {
     companion object {
-        // Aliasy żyjące przy klasie, ale dostępne przez HttpClient.Headers
-        typealias Headers = Map<String, String>
+        typealias Headers     = Map<String, String>
         typealias QueryParams = Map<String, String>
-        typealias Body = String
+        typealias Body        = String
 
-        fun get(url: String, headers: Headers = emptyMap(), params: QueryParams = emptyMap()): String {
-            println("  GET $url")
-            println("  Headers: $headers")
-            println("  Params: $params")
-            return """{"status": "ok"}"""
+        // W becie aliasy są niedostępne w sygnaturach funkcji WEWNĄTRZ tego samego
+        // companion — użyj ich jako typów lokalnych zmiennych lub spoza klasy
+        fun get(url: String, headers: Map<String, String> = emptyMap(),
+                params: Map<String, String> = emptyMap()): String {
+            val h: Headers      = headers   // alias jako typ lokalny — działa!
+            val p: QueryParams  = params
+            println("  GET $url | headers: $h | params: $p")
+            return """{"status":"ok"}"""
         }
 
-        fun post(url: String, body: Body, headers: Headers = emptyMap()): String {
-            println("  POST $url")
-            println("  Body: $body")
-            return """{"status": "created"}"""
+        fun post(url: String, body: Map<String, String> = emptyMap(),
+                 headers: Map<String, String> = emptyMap()): String {
+            val b: Body = body.entries.joinToString(", ") { "${it.key}=${it.value}" }
+            println("  POST $url | body: $b")
+            return """{"status":"created"}"""
         }
     }
 }
@@ -128,30 +156,23 @@ class HttpClient {
 fun httpClientExample() {
     println("\n=== HttpClient ===")
 
-    // Używamy aliasów przez companion — czytelne i samodokumentujące się
-    val headers: HttpClient.Headers = mapOf(
-        "Authorization" to "Bearer token123",
-        "Accept" to "application/json"
-    )
-    val params: HttpClient.QueryParams = mapOf("page" to "1", "size" to "10")
+    // Aliasy są dostępne wewnątrz klasy. Na zewnątrz używamy type inference lub pełnego typu.
+    val headers = mapOf("Authorization" to "Bearer token123")   // = Map<String, String>
+    val params  = mapOf("page" to "1", "size" to "10")          // = Map<String, String>
 
     HttpClient.get("https://api.example.com/users", headers, params)
-    HttpClient.post(
-        "https://api.example.com/users",
-        body = """{"name": "Anna"}""",
-        headers = mapOf("Content-Type" to "application/json")
-    )
+    HttpClient.post("https://api.example.com/users", mapOf("name" to "Anna"))
 }
 
-// ---- 5. Porównanie: top-level vs nested alias ----
+// ---- 5. Porównanie: top-level vs nested — czystość przestrzeni nazw ----
 
 // Top-level alias — widoczny wszędzie w pakiecie (czasem to za dużo)
 typealias GlobalScoreMap = Map<String, Int>
 
 class Tournament {
-    // Nested alias — widoczny tylko w kontekście Tournament
+    // Nested alias — widoczny tylko jako Tournament.ScoreMap z zewnątrz
     // Nie zaśmieca globalnej przestrzeni nazw
-    typealias ScoreMap = Map<String, Int>
+    typealias ScoreMap   = Map<String, Int>
     typealias Leaderboard = List<Pair<String, Int>>
 
     private val scores = mutableMapOf<String, Int>()
@@ -176,8 +197,9 @@ fun tournamentExample() {
     t.addScore("Celina", 175)
     t.addScore("Anna", 50)
 
-    println("  Ranking:")
-    t.leaderboard().forEachIndexed { i, (name, score) ->
+    // Typ zwracany jest Tournament.Leaderboard — alias "należy" do klasy
+    val ranking: Tournament.Leaderboard = t.leaderboard()
+    ranking.forEachIndexed { i, (name, score) ->
         println("  ${i + 1}. $name: $score pkt")
     }
 }
@@ -185,6 +207,7 @@ fun tournamentExample() {
 fun main() {
     basicNestedAliasExample()
     graphExample()
+    transformersExample()
     httpClientExample()
     tournamentExample()
 }

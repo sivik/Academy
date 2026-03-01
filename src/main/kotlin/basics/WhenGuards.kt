@@ -75,24 +75,34 @@ fun guardWithValuesExample() {
     }
 }
 
-// ---- 3. Guard w połączeniu z destrukturyzacją ----
+// ---- 3. Guard na wartościach enum ----
+// Guard naprawdę błyszczy gdy ten sam case enum wymaga różnej obsługi
 
-data class Order(val id: Int, val amount: Double, val paid: Boolean, val vip: Boolean)
+enum class PaymentStatus { PENDING, PROCESSING, COMPLETED, FAILED, REFUNDED }
 
-fun processOrder(order: Order): String = when (order) {
-    Order(_, _, paid = false, _) -> "Zamówienie ${order.id}: oczekuje na płatność"
-    // guard sprawdza dodatkowy warunek po dopasowaniu
-    else if order.vip && order.amount > 1000   -> "VIP ${order.id}: ekspresowa realizacja (${order.amount}zł)"
-    else if order.amount > 500                 -> "Zamówienie ${order.id}: priorytetowe (${order.amount}zł)"
-    else                                       -> "Zamówienie ${order.id}: standardowe (${order.amount}zł)"
+data class Order(val id: Int, val amount: Double, val status: PaymentStatus, val vip: Boolean)
+
+fun processOrder(order: Order): String = when (order.status) {
+    PaymentStatus.COMPLETED if order.vip && order.amount > 1000 -> "⭐ VIP ${order.id}: ekspresowa realizacja"
+    PaymentStatus.COMPLETED if order.amount > 500               -> "🔝 Zamówienie ${order.id}: priorytetowe"
+    PaymentStatus.COMPLETED                                     -> "✅ Zamówienie ${order.id}: zrealizowane"
+    PaymentStatus.PENDING   if order.vip                        -> "⭐ VIP ${order.id}: przyspieszone przetwarzanie"
+    PaymentStatus.PENDING                                       -> "⏳ Zamówienie ${order.id}: oczekuje na płatność"
+    PaymentStatus.FAILED    if order.amount > 500               -> "❌ Zamówienie ${order.id}: wymagana weryfikacja"
+    PaymentStatus.FAILED                                        -> "❌ Zamówienie ${order.id}: spróbuj ponownie"
+    else                                                        -> "ℹ️  Zamówienie ${order.id}: ${order.status}"
 }
 
-fun guardWithDataClassExample() {
+fun guardWithEnumExample() {
     listOf(
-        Order(1, 250.0, paid = true, vip = false),
-        Order(2, 750.0, paid = true, vip = false),
-        Order(3, 1500.0, paid = true, vip = true),
-        Order(4, 100.0, paid = false, vip = false)
+        Order(1, 250.0,  PaymentStatus.COMPLETED, vip = false),
+        Order(2, 750.0,  PaymentStatus.COMPLETED, vip = false),
+        Order(3, 1500.0, PaymentStatus.COMPLETED, vip = true),
+        Order(4, 100.0,  PaymentStatus.PENDING,   vip = false),
+        Order(5, 200.0,  PaymentStatus.PENDING,   vip = true),
+        Order(6, 600.0,  PaymentStatus.FAILED,    vip = false),
+        Order(7, 50.0,   PaymentStatus.FAILED,    vip = false),
+        Order(8, 300.0,  PaymentStatus.REFUNDED,  vip = false)
     ).forEach { println(processOrder(it)) }
 }
 
@@ -155,7 +165,7 @@ fun main() {
     guardWithValuesExample()
 
     println("\n=== 3. Zamówienia ===")
-    guardWithDataClassExample()
+    guardWithEnumExample()
 
     println("\n=== 4. Kształty ===")
     guardVsIfExample()
